@@ -8,18 +8,21 @@ const router = express.Router();
 // In this case, the decision to not use an authentication method was
 // chosen as this route was made to simply add 4 items to our backend.
 router.post("/addItems", async (req, res) => {
-  const { title, subtitle, price, image, backgroundColor } = req.body;
-
   try {
-    const shopItem = new ShopItem({
-      title,
-      subtitle,
-      price,
-      image,
-      backgroundColor,
-    });
+    for (let item of req.body.data) {
+      const { title, subtitle, price, imageUrl, backgroundColor } = item;
+      const shopItem = new ShopItem({
+        title,
+        subtitle,
+        price,
+        imageUrl,
+        backgroundColor,
+      });
 
-    await shopItem.save();
+      console.log({ item });
+
+      await shopItem.save();
+    }
     res.send(req.body);
   } catch (error) {
     // Returns status of 422 to obfuscate the actual problem in the
