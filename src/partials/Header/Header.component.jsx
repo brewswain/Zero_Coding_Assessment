@@ -1,10 +1,9 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectCart, toggleVisibility } from "../../redux/cart/cartSlice";
+import { useDispatch } from "react-redux";
+import { toggleVisibility } from "../../redux/cart/cartSlice";
 import "./Header.style.scss";
 
 const Header = () => {
-  const cart = useSelector(selectCart);
   const dispatch = useDispatch();
 
   return (
