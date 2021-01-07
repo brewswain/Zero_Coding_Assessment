@@ -8,7 +8,7 @@ export const shopData = [
     title: "Mojito",
     subtitle: "Cool off with this refreshing cocktail!",
     price: 10,
-    image: "https://ibb.co/W03mGsn",
+    imageUrl: "https://i.ibb.co/2S6GW5q/cocktail.png",
     backgroundColor: "#bfb0de",
   },
   {
@@ -16,7 +16,7 @@ export const shopData = [
     title: "Salad",
     subtitle: "Salads are delicious yall are just cowards :(",
     price: 8,
-    image: "https://ibb.co/HCZ2v1Q",
+    imageUrl: "https://i.ibb.co/kJZynkF/salad.png",
     backgroundColor: "#fac68e",
   },
   {
@@ -24,7 +24,7 @@ export const shopData = [
     title: "Swiss Roll",
     subtitle: "Curb your sweet tooth with this delightful Swiss Roll!",
     price: 12,
-    image: "https://ibb.co/whrv5yh",
+    imageUrl: "https://i.ibb.co/7tN9svt/swiss-roll.png",
     backgroundColor: "#c1d9c3",
   },
   {
@@ -33,7 +33,7 @@ export const shopData = [
     subtitle:
       "This image already has you salivating. Might as well order one! Or two. Or five.",
     price: 3,
-    image: "https://ibb.co/cg32f9b",
+    imageUrl: "https://i.ibb.co/X2LF0Py/taco.png",
     backgroundColor: "#f09090",
   },
 ];

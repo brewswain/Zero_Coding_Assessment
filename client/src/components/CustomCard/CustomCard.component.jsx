@@ -4,14 +4,14 @@ import { CustomButton } from "..";
 import "./CustomCard.style.scss";
 
 const CustomCard = ({ item }) => {
-  const { backgroundColor, image, price, subtitle, title } = item;
+  const { backgroundColor, imageUrl, price, subtitle, title } = item;
 
   return (
     <div className="card__container">
       <div className="card-image__container" style={{ backgroundColor }}>
         <img
           className="card__media"
-          src={image}
+          src={imageUrl}
           alt={`Food item for sale: ${title} `}
         />
       </div>
