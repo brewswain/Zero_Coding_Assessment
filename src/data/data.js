@@ -1,6 +1,6 @@
 // Test data file used to simulate backend structure.
 
-import { Cocktail, Roll, Salad, Taco } from "../assets";
+//ibb.co/HCZ2v1Q
 
 export const shopData = [
   {
@@ -8,7 +8,7 @@ export const shopData = [
     title: "Mojito",
     subtitle: "Cool off with this refreshing cocktail!",
     price: 10,
-    image: Cocktail,
+    image: "https://ibb.co/W03mGsn",
     backgroundColor: "#bfb0de",
   },
   {
@@ -16,7 +16,7 @@ export const shopData = [
     title: "Salad",
     subtitle: "Salads are delicious yall are just cowards :(",
     price: 8,
-    image: Salad,
+    image: "https://ibb.co/HCZ2v1Q",
     backgroundColor: "#fac68e",
   },
   {
@@ -24,7 +24,7 @@ export const shopData = [
     title: "Swiss Roll",
     subtitle: "Curb your sweet tooth with this delightful Swiss Roll!",
     price: 12,
-    image: Roll,
+    image: "https://ibb.co/whrv5yh",
     backgroundColor: "#c1d9c3",
   },
   {
@@ -33,7 +33,7 @@ export const shopData = [
     subtitle:
       "This image already has you salivating. Might as well order one! Or two. Or five.",
     price: 3,
-    image: Taco,
+    image: "https://ibb.co/cg32f9b",
     backgroundColor: "#f09090",
   },
 ];
