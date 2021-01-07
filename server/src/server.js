@@ -2,6 +2,7 @@
 require("./models/shopItem.model");
 
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const shopItemRoute = require("./routes/shopItem.route");
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 3001;
 
 // bodyParser placed above any potential routes that need JSON responses
 app.use(bodyParser.json());
+app.use(cors());
 app.use(shopItemRoute);
 
 mongoose.connect(process.env.MONGO_URI, {
