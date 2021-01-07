@@ -1,0 +1,27 @@
+.landing-hero {
+  &__container {
+    height: 500px;
+    width: 80vw;
+    background: grey;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.hero-text {
+  &__container {
+    padding: 3rem;
+  }
+}
+
+.hero-image {
+  &__container {
+    max-width: 500px;
+  }
+}
