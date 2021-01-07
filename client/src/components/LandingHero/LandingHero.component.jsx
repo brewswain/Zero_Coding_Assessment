@@ -7,7 +7,10 @@ import "./LandingHero.style.scss";
 const LandingHero = () => (
   <div className="landing-hero__container">
     <div className="hero-text__container">
-      <h2 className="landing-hero__title">Hewwo</h2>
+      <h2 className="landing-hero__title">Hewwo this is a test component</h2>
+      <h2 className="landing-hero__title">
+        I might do some simple routing from this hero!
+      </h2>
       <CustomButton>Shop Now</CustomButton>
     </div>
     <div className="hero-image__container">
