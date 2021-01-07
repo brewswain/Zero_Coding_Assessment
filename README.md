@@ -49,7 +49,7 @@ If however, you're using npm, please use the following commands as needed:
 }
 ```
 
-Please keep in mind that this means that an item will be added to the backend. If by the time I send this project I added a delete functionality (Hopefully I will but not high on priorities), this means that the backend will render a new Item with the 'Test title' information added.
+Please keep in mind that this means that an item will be added to the backend. If by the time I send this project I added a delete functionality (Hopefully I will but not high on priorities), this means that the frontend will render a new Item with the 'Test title' information added.
 
 If you were to make the shape incorrect for testing purposes, mongoose _should_ catch them and return errors in a readable format.
 
