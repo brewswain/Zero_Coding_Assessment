@@ -1,0 +1,43 @@
+.cart {
+  &__container {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    top: 0;
+    right: 0;
+  }
+
+  &__modal {
+    background: white;
+    width: 350px;
+    min-height: 400px;
+    right: 2rem;
+    top: 5rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.modal {
+  &-item {
+    &__container {
+    }
+  }
+  &__item {
+    padding: 2rem;
+  }
+
+  &-button {
+    &__container {
+      padding-bottom: 2rem;
+    }
+  }
+}

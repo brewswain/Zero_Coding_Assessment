@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CustomButton } from "..";
+import { useDispatch, useSelector } from "react-redux";
+
+import { selectCartItems, addToCart } from "../../redux/cart/cartSlice";
 
 import "./CustomCard.style.scss";
 
 const CustomCard = ({ item }) => {
-  const { backgroundColor, imageUrl, price, subtitle, title } = item;
+  const dispatch = useDispatch();
 
+  const { _id, backgroundColor, imageUrl, price, subtitle, title } = item;
   return (
     <div className="card__container">
       <div className="card-image__container" style={{ backgroundColor }}>
@@ -21,7 +25,13 @@ const CustomCard = ({ item }) => {
 
         <div className="card-price__container">
           <div className="cart__price">${price}.00</div>
-          <CustomButton>Add Now</CustomButton>
+          <CustomButton
+            onClick={async () => {
+              dispatch(addToCart({ title, price, _id, quantity: 1 }));
+            }}
+          >
+            Add Now
+          </CustomButton>
         </div>
       </div>
     </div>
