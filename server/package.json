@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "zero_coding_assessment_server",
   "version": "1.0.0",
   "main": "src/server.js",
   "license": "MIT",
