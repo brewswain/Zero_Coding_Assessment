@@ -9,7 +9,7 @@ const shopItemRoute = require("./routes/shopItem.route");
 require("dotenv").config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // bodyParser placed above any potential routes that need JSON responses
 app.use(bodyParser.json());
