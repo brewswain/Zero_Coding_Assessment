@@ -4,11 +4,26 @@ const mongoose = require("mongoose");
 // but as I'm just using this Schema to push 4 items that I personally tailored,
 // this is fine.
 const ShopItemSchema = new mongoose.Schema({
-  title: String,
-  subtitle: String,
-  price: Number,
-  imageUrl: String,
-  backgroundColor: String,
+  title: {
+    type: String,
+    required: true,
+  },
+  subtitle: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  imageUrl: {
+    type: String,
+    required: true,
+  },
+  backgroundColor: {
+    type: String,
+    required: true,
+  },
 });
 
 mongoose.model("ShopItem", ShopItemSchema);
