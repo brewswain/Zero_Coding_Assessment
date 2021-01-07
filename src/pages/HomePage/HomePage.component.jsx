@@ -1,5 +1,5 @@
 import React from "react";
-import { Cart } from "../../components";
+import { Cart, LandingHero, ShopList } from "../../components";
 import { Header } from "../../partials";
 import "./HomePage.style.scss";
 
@@ -8,6 +8,8 @@ const HomePage = () => {
     <div>
       <Header />
       <Cart />
+      <LandingHero />
+      <ShopList />
     </div>
   );
 };
