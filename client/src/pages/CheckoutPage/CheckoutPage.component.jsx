@@ -9,6 +9,12 @@ const CheckoutPage = () => {
   const cartItemState = useSelector(selectCartItems);
   const dispatch = useDispatch();
 
+  const itemTotals = cartItemState.map(
+    (cartItem, index) => cartItem.price * cartItem.quantity
+  );
+
+  const subtotal = itemTotals.reduce((a, b) => a + b, 0);
+
   return (
     <div className="checkout__container">
       <div className="checkout__header">
@@ -24,6 +30,7 @@ const CheckoutPage = () => {
             <CheckoutItem key={cartItem._id} item={cartItem} />
           ))
         : null}
+      <h1 className="checkout__title">Subtotal: ${subtotal}.00</h1>
     </div>
   );
 };
