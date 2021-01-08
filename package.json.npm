@@ -1,0 +1,21 @@
+{
+  "name": "zero_coding_assessment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:brewswain/zero_coding_assessment",
+  "author": "Brandon Lee <brandonlee2543@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run start",
+    "add-all": "concurrently \"npm run add-client\" \"npm run add-server\"",
+    "add-client": "cd client && npm install",
+    "add-server": "cd server && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "react-router-dom": "^5.2.0"
+
+  }
+}
