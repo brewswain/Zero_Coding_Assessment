@@ -1,0 +1,22 @@
+.checkout {
+  &__container {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    padding-right: 5.2rem;
+  }
+
+  &-options {
+    &__container {
+      height: 80px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}

@@ -1,33 +1,40 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { toggleVisibility } from "../../redux/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleVisibility, selectCartItems } from "../../redux/cart/cartSlice";
 import { Link } from "react-router-dom";
 import "./Header.style.scss";
+import { ShoppingCart } from "../../assets";
 
 const Header = () => {
   const dispatch = useDispatch();
+  const cartItemState = useSelector(selectCartItems);
+
+  const totalQuantities = cartItemState.map(
+    (cartItem, index) => cartItem.quantity
+  );
+
+  const summedQuantities = totalQuantities.reduce((a, b) => a + b, 0);
 
   return (
     <div className="header__container">
       <div className="links__container">
-        <Link to="/">
-          <div className="header__link header__link--primary">
-            Random Store no. 1
-          </div>
+        <Link to="/" className="header__link">
+          <div className="header__link--primary">Random Store no. 1</div>
         </Link>
       </div>
       <div className="links__container">
         <div
-          className="header__link"
+          className="header__link header-icon__container"
           onClick={() => dispatch(toggleVisibility())}
         >
-          Cart
+          <ShoppingCart className="header__icon" />
+          <span className="cart__quantity">{summedQuantities}</span>
         </div>
-        <Link to="/shop">
-          <div className="header__link">Shop</div>
+        <Link to="/shop" className="header__link">
+          <div>Shop</div>
         </Link>
-        <Link to="/checkout">
-          <div className="header__link">Checkout</div>
+        <Link to="/checkout" className="header__link">
+          <div>Checkout</div>
         </Link>
       </div>
     </div>
