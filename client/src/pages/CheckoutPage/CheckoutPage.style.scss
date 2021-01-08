@@ -2,21 +2,26 @@
   &__container {
     max-width: 60vw;
     margin: 0 auto;
+    display: grid;
+    padding-top: 4rem;
   }
   &__header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
   }
   &__title {
-    padding-right: 5.2rem;
+    &:first-child {
+      grid-column: 1 / span 2;
+      justify-self: start;
+    }
   }
 
   &-options {
     &__container {
       height: 80px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   &__subtotal {
@@ -32,5 +37,52 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+  }
+}
+
+// animation for modal
+
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+// Modal design
+
+.alert {
+  &__container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(3, 3, 3, 0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(15, 179, 102);
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
   }
 }
