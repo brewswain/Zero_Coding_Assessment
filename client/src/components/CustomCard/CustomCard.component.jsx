@@ -24,7 +24,7 @@ const CustomCard = ({ item }) => {
         <div className="card__subtitle">{subtitle}</div>
 
         <div className="card-price__container">
-          <div className="cart__price">${price}.00</div>
+          <div className="card__price">${price}.00</div>
           <CustomButton
             onClick={async () => {
               dispatch(addToCart({ title, price, _id, imageUrl, quantity: 1 }));
