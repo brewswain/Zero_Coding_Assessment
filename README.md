@@ -1,6 +1,6 @@
 # Project startup
 
-## *Pre-requisites*
+## Pre-requisites
 
 
 This project currently assumes that you have Yarn installed. If you're using npm instead:
@@ -15,8 +15,21 @@ This project currently assumes that you have Yarn installed. If you're using npm
 - Delete the root `yarn.lock` file
 - Rename `package-lock.json_bak` to `package-lock.json`
 
+---
+
+## Installing Dependencies
+
+Please begin by using `yarn install` in the root directory. If you have npm, use `npm install` instead.
+
+Once that's done, feel use `yarn add-all`  if you have Yarn installed.
+
+If you're using npm, use `npm run add-all`.
+
+If the installs give problems, please navigate into both the client/ and the server/ folders and manually run your install scripts.
 
 ---
+
+
 
 ## Starting up Project
 
