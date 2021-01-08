@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleVisibility, selectCartItems } from "../../redux/cart/cartSlice";
 import { Link } from "react-router-dom";
+import { toggleVisibility, selectCartItems } from "../../redux/cart/cartSlice";
 import "./Header.style.scss";
 import { ShoppingCart } from "../../assets";
 
@@ -19,7 +19,7 @@ const Header = () => {
     <div className="header__container">
       <div className="links__container">
         <Link to="/" className="header__link">
-          <div className="header__link--primary">Random Store no. 1</div>
+          <div className="header__link--primary">Eden</div>
         </Link>
       </div>
       <div className="links__container">
