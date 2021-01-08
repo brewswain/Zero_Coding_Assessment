@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   selectCartItems,
   selectVisible,
@@ -47,7 +48,17 @@ const Cart = () => {
               )}
             </div>
             <div className="modal-button__container">
-              <CustomButton>Checkout</CustomButton>
+              <Link
+                to="/checkout"
+                onMouseDown={(event) => {
+                  event.preventDefault();
+                }}
+                onClick={() => {
+                  dispatch(toggleVisibility());
+                }}
+              >
+                <CustomButton>Checkout</CustomButton>
+              </Link>
             </div>
           </div>
         </div>
