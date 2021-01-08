@@ -2,4 +2,22 @@
 // Will use CSS Variable naming convention over SASS ones for readability purposes
 
 body {
+  // Macro Styling
+
+  // HomePage
+  --landing-page-background: hsl(180, 76%, 87%);
+  --landing-title-font-color: hsl(180, 70%, 28%);
+  --landing-link-font-color: hsl(230, 20%, 34%);
+  --landing-link-active-color: hsl(230, 20%, 54%);
+
+  // ShopPage
+  --shop-page-background: hsl(15, 79%, 87%);
+  --shop-card-background: hsl(0, 0%, 95%);
+  --shop-card-primary-text-color: hsl(340, 86%, 57%);
+  --shop-card-secondary-text-color: hsl(340, 75%, 65%);
+  --shop-card-tertiary-text-color: hsl(339, 83%, 42%);
+
+  //CheckoutPage
+
+  --checkout-page-background: hsl(295, 94%, 79%);
 }

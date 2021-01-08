@@ -1,0 +1,54 @@
+.landing {
+  &-image {
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2rem;
+
+      &--overlap {
+        display: grid;
+        padding-bottom: 5rem;
+        width: 600px;
+        gap: 5rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 5rem;
+    width: 40vw;
+    color: var(--landing-title-font-color);
+  }
+
+  &__image {
+    width: 25%;
+
+    &--primary {
+      width: 100%;
+      grid-column: 2 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    &--secondary {
+      width: 100%;
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 2;
+    }
+  }
+
+  &__button {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 4rem;
+    width: 20rem;
+
+    color: var(--landing-link-font-color);
+
+    &:hover {
+      background: none;
+      color: var(--landing-link-active-color);
+    }
+  }
+}
