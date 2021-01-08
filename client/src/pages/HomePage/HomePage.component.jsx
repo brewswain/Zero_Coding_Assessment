@@ -1,11 +1,12 @@
 import React from "react";
-import { LandingHero } from "../../components";
+import { LandingContainer } from "../../components";
+
 import "./HomePage.style.scss";
 
 const HomePage = () => {
   return (
     <div>
-      <LandingHero />
+      <LandingContainer />
     </div>
   );
 };
