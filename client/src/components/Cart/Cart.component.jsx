@@ -1,12 +1,18 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectVisible, toggleVisibility } from "../../redux/cart/cartSlice";
+import {
+  selectCartItems,
+  selectVisible,
+  toggleVisibility,
+} from "../../redux/cart/cartSlice";
+import CartItem from "../CartItem/CartItem.component";
 import CustomButton from "../CustomButton/CustomButton.component";
 
 import "./Cart.style.scss";
 
 const Cart = () => {
   const isVisible = useSelector(selectVisible);
+  const cartItemState = useSelector(selectCartItems);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,8 +36,15 @@ const Cart = () => {
             }}
           >
             <div className="modal-item__container">
-              <div className="modal__item">Test this is an item</div>
-              <div className="modal__item">Test this is an item</div>
+              {cartItemState.length ? (
+                cartItemState.map((cartItem) => (
+                  <CartItem key={cartItem._id} itemProps={cartItem} />
+                ))
+              ) : (
+                <div className="modal-item__container--empty">
+                  Your cart is empty :(
+                </div>
+              )}
             </div>
             <div className="modal-button__container">
               <CustomButton>Checkout</CustomButton>

@@ -29,6 +29,9 @@
 .modal {
   &-item {
     &__container {
+      &--empty {
+        padding-top: 3rem;
+      }
     }
   }
   &__item {
