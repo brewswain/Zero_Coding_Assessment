@@ -5,7 +5,7 @@ import "./ShopPage.style.scss";
 
 const ShopPage = () => {
   return (
-    <div>
+    <div className="shop__page">
       <ShopList />
     </div>
   );
