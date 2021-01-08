@@ -5,7 +5,7 @@ import {
   // addShopItems,
   selectShopItems,
 } from "../../redux/shopItems/shopItemsSlice";
-import { CustomCard } from "..";
+import { CustomCard } from "../../components";
 
 import "./ShopList.style.scss";
 
