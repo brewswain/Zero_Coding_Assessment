@@ -21,6 +21,29 @@ export const cartSlice = createSlice({
         state.cartItemState[itemIndex].quantity += action.payload.quantity;
       }
     },
+
+    removeFromCart: (state, action) => {
+      const itemIndex = getItemIndex(state, action.payload._id);
+
+      if (state.cartItemState[itemIndex].quantity <= 1) {
+        state.cartItemState = state.cartItemState.filter(
+          (cartItem) => cartItem.title !== action.payload.title
+        );
+      } else {
+        state.cartItemState[itemIndex].quantity -= 1;
+      }
+    },
+
+    clearFromCart: (state, action) => {
+      const itemIndex = getItemIndex(state, action.payload._id);
+
+      if (itemIndex && itemIndex < 0) {
+        console.log("clearing!");
+        state.cartItemState = state.cartItemState.filter(
+          (cartItem) => cartItem.title !== action.payload.title
+        );
+      }
+    },
   },
 });
 
@@ -29,7 +52,12 @@ const getItemIndex = (state, idToFind) => {
   return targetId.indexOf(idToFind);
 };
 
-export const { addToCart, toggleVisibility } = cartSlice.actions;
+export const {
+  addToCart,
+  clearFromCart,
+  removeFromCart,
+  toggleVisibility,
+} = cartSlice.actions;
 
 export const selectVisible = (state) => state.cart.isVisible;
 export const selectCartItems = (state) => state.cart.cartItemState;
