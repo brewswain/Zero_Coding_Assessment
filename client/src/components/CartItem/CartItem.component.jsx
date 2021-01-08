@@ -4,7 +4,6 @@ import "./CartItem.style.scss";
 
 const CartItem = ({ itemProps }) => {
   const { title, price, quantity, imageUrl } = itemProps;
-  console.log(itemProps);
   return (
     <div className="cart-item__container">
       <img
