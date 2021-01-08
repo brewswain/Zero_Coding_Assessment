@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
+
 import {
   selectCartItems,
   selectVisible,
@@ -25,7 +27,13 @@ const Cart = () => {
 
   return (
     <div>
-      {isVisible ? (
+      {/* {isVisible ? ( */}
+      <CSSTransition
+        in={isVisible}
+        timeout={300}
+        classNames="cart-visible"
+        unmountOnExit
+      >
         <div className="cart__container">
           <div
             className="cart__modal"
@@ -62,7 +70,8 @@ const Cart = () => {
             </div>
           </div>
         </div>
-      ) : null}
+      </CSSTransition>
+      {/* ) : null} */}
     </div>
   );
 };
