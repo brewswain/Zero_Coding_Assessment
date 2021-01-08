@@ -23,7 +23,11 @@ const CheckoutPage = () => {
 
   const simulatePayment = () => {
     setShowMessage(true);
-    dispatch(clearEntireCart(cartItemState));
+    setTimeout(() => {
+      // Cosmetic Timeout; staggered the cart clear in a separate timeout to make the
+      // process seem less jarring
+      dispatch(clearEntireCart(cartItemState));
+    }, 500);
     setTimeout(() => {
       history.push("/shop");
     }, 1000);
