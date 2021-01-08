@@ -2,10 +2,12 @@
   &__container {
     padding-top: 0.5rem;
     height: 40px;
+    width: 100vw;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
   }
 
   &__icon {
