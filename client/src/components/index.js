@@ -11,6 +11,17 @@ import CartItem from "./CartItem/CartItem.component";
 import CheckoutItem from "./CheckoutItem/CheckoutItem.component";
 import CustomButton from "./CustomButton/CustomButton.component";
 import CustomCard from "./CustomCard/CustomCard.component";
+import LandingContainer from "./LandingContainer/LandingContainer.component";
 import LandingHero from "./LandingHero/LandingHero.component";
+import LandingImageBox from "./LandingImageBox/LandingImageBox.component";
 
-export { Cart, CartItem, CheckoutItem, CustomButton, CustomCard, LandingHero };
+export {
+  Cart,
+  CartItem,
+  CheckoutItem,
+  CustomButton,
+  CustomCard,
+  LandingContainer,
+  LandingHero,
+  LandingImageBox,
+};
