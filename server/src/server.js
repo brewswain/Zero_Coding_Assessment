@@ -31,10 +31,6 @@ mongoose.connection.on("error", (err) => {
   console.error("Error connecting to mongo", err);
 });
 
-app.get("/", (req, res) => {
-  console.log("hi from home route!");
-});
-
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });

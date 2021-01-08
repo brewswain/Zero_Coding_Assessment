@@ -8,9 +8,7 @@ const router = express.Router();
 // In this case, the decision to not use an authentication method was
 // chosen as this route was made to simply add 4 items to our backend.
 router.post("/addItems", async (req, res) => {
-  console.log(req.body);
-
-  // This if then else statement is put in for testing purposes only.
+  // This If-Then-Else statement is put in for testing purposes only.
   // If the user were to load our shop page, the client would make an axios
   // request that has a 'data' object attached to the body.
   // If we were to make a postman request by simply adding a JSON to the body,
