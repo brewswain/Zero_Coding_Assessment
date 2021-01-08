@@ -1,5 +1,7 @@
 import React from "react";
-import { CustomButton } from "..";
+import { Link } from "react-router-dom";
+
+import CustomButton from "../CustomButton/CustomButton.component";
 import { HeroImage } from "../../assets";
 
 import "./LandingHero.style.scss";
@@ -11,7 +13,9 @@ const LandingHero = () => (
       <h2 className="landing-hero__title">
         I might do some simple routing from this hero!
       </h2>
-      <CustomButton>Shop Now</CustomButton>
+      <Link to="/shop">
+        <CustomButton>Shop Now</CustomButton>
+      </Link>
     </div>
     <div className="hero-image__container">
       <img
