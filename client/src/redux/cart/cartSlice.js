@@ -38,7 +38,6 @@ export const cartSlice = createSlice({
       const itemIndex = getItemIndex(state, action.payload._id);
 
       if (itemIndex && itemIndex < 0) {
-        console.log("clearing!");
         state.cartItemState = state.cartItemState.filter(
           (cartItem) => cartItem.title !== action.payload.title
         );
