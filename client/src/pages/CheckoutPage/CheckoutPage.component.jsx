@@ -1,19 +1,28 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { CheckoutItem } from "../../components";
-import { selectCartItems } from "../../redux/cart/cartSlice";
+import { CheckoutItem, CustomButton } from "../../components";
+import { useHistory } from "react-router-dom";
+
+import { clearEntireCart, selectCartItems } from "../../redux/cart/cartSlice";
 
 import "./CheckoutPage.style.scss";
 
 const CheckoutPage = () => {
   const cartItemState = useSelector(selectCartItems);
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const itemTotals = cartItemState.map(
     (cartItem, index) => cartItem.price * cartItem.quantity
   );
 
   const subtotal = itemTotals.reduce((a, b) => a + b, 0);
+
+  const simulatePayment = () => {
+    alert("Congrats! you just made a payment like the cool kids :O");
+    dispatch(clearEntireCart(cartItemState));
+    history.push("/shop");
+  };
 
   return (
     <div className="checkout__container">
@@ -30,7 +39,19 @@ const CheckoutPage = () => {
             <CheckoutItem key={cartItem._id} item={cartItem} />
           ))
         : null}
-      <h1 className="checkout__title">Subtotal: ${subtotal}.00</h1>
+
+      <div className="checkout-payment__container">
+        <h1 className="checkout__title checkout__subtotal">
+          Subtotal: ${subtotal}.00
+        </h1>
+        <CustomButton
+          large
+          style={{ marginTop: "2rem", marginBottom: "2rem" }}
+          onClick={simulatePayment}
+        >
+          Pay Now
+        </CustomButton>
+      </div>
     </div>
   );
 };

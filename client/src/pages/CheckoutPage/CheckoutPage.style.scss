@@ -19,4 +19,18 @@
       align-items: center;
     }
   }
+  &__subtotal {
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+}
+
+.checkout-payment {
+  &__container {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }

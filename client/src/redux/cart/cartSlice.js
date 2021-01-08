@@ -44,6 +44,10 @@ export const cartSlice = createSlice({
         );
       }
     },
+
+    clearEntireCart: (state) => {
+      state.cartItemState = [];
+    },
   },
 });
 
@@ -55,6 +59,7 @@ const getItemIndex = (state, idToFind) => {
 export const {
   addToCart,
   clearFromCart,
+  clearEntireCart,
   removeFromCart,
   toggleVisibility,
 } = cartSlice.actions;
