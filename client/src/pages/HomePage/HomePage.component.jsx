@@ -1,6 +1,6 @@
 import React from "react";
-import { Cart, LandingHero, ShopList } from "../../components";
-import { Header } from "../../partials";
+import { Cart, LandingHero } from "../../components";
+import { Header, ShopList } from "../../partials";
 import "./HomePage.style.scss";
 
 const HomePage = () => {
