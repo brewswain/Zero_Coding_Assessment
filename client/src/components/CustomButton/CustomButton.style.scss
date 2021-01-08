@@ -17,6 +17,12 @@
       width: 250px;
     }
 
+    &--disabled {
+      background-color: grey;
+      border: 2px solid grey;
+      pointer-events: none;
+    }
+
     &:hover {
       background: whitesmoke;
       color: #0077ff;
