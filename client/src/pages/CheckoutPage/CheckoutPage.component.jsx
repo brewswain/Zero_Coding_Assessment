@@ -34,44 +34,48 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div className="checkout__container">
-      <CSSTransition
-        in={showMessage}
-        timeout={300}
-        classNames="alert"
-        unmountOnExit
-      >
-        <div className="alert__container">
-          <div className="alert__message">Payment Accepted!</div>
-        </div>
-      </CSSTransition>
-      <div className="checkout__header">
-        <h1 className="checkout__title">Products</h1>
-
-        <h1 className="checkout__title">Price</h1>
-        <h1 className="checkout__title">Quantity</h1>
-        <h1 className="checkout__title">Total</h1>
-      </div>
-      {cartItemState.length
-        ? cartItemState.map((cartItem) => (
-            <CheckoutItem key={cartItem._id} item={cartItem} />
-          ))
-        : null}
-
-      <div className="checkout-payment__container">
-        <h1 className="checkout__title checkout__subtotal">
-          Subtotal: ${subtotal}.00
-        </h1>
-        <CustomButton
-          large
-          style={{ marginTop: "2rem", marginBottom: "2rem" }}
-          onClick={simulatePayment}
-          customClass={`${
-            !cartItemState.length ? "custom__button--disabled" : ""
-          }`}
+    <div className="checkout__page">
+      <div className="checkout__container">
+        <CSSTransition
+          in={showMessage}
+          timeout={300}
+          classNames="alert"
+          unmountOnExit
         >
-          Pay Now
-        </CustomButton>
+          <div className="alert__container">
+            <div className="alert__message">Payment Accepted!</div>
+          </div>
+        </CSSTransition>
+        <div className="checkout-details__container">
+          <div className="checkout__header">
+            <h1 className="checkout__title">Products</h1>
+
+            <h1 className="checkout__title">Price</h1>
+            <h1 className="checkout__title">Quantity</h1>
+            <h1 className="checkout__title">Total</h1>
+          </div>
+          {cartItemState.length
+            ? cartItemState.map((cartItem) => (
+                <CheckoutItem key={cartItem._id} item={cartItem} />
+              ))
+            : null}
+        </div>
+
+        <div className="checkout-payment__container">
+          <h1 className="checkout__title checkout__subtotal">
+            Subtotal: ${subtotal}.00
+          </h1>
+          <CustomButton
+            large
+            style={{ marginTop: "2rem", marginBottom: "2rem" }}
+            onClick={simulatePayment}
+            customClass={`${
+              !cartItemState.length ? "custom__button--disabled" : ""
+            }`}
+          >
+            Pay Now
+          </CustomButton>
+        </div>
       </div>
     </div>
   );
