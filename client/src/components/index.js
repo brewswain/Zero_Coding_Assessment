@@ -12,7 +12,6 @@ import CheckoutItem from "./CheckoutItem/CheckoutItem.component";
 import CustomButton from "./CustomButton/CustomButton.component";
 import CustomCard from "./CustomCard/CustomCard.component";
 import LandingContainer from "./LandingContainer/LandingContainer.component";
-import LandingHero from "./LandingHero/LandingHero.component";
 import LandingImageBox from "./LandingImageBox/LandingImageBox.component";
 
 export {
@@ -22,6 +21,5 @@ export {
   CustomButton,
   CustomCard,
   LandingContainer,
-  LandingHero,
   LandingImageBox,
 };
