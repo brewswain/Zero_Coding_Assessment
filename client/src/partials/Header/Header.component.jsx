@@ -33,9 +33,11 @@ const Header = () => {
         <Link to="/shop" className="header__link">
           <div>Shop</div>
         </Link>
-        <Link to="/checkout" className="header__link">
-          <div>Checkout</div>
-        </Link>
+        {cartItemState.length ? (
+          <Link to="/checkout" className="header__link">
+            <div>Checkout</div>
+          </Link>
+        ) : null}
       </div>
     </div>
   );
