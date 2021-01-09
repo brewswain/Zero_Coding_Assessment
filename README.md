@@ -21,11 +21,7 @@ This project currently assumes that you have Yarn installed. If you're using npm
 
 Please begin by using `yarn install` in the root directory. If you have npm, use `npm install` instead.
 
-Once that's done, feel use `yarn add-all`  if you have Yarn installed.
-
-If you're using npm, use `npm run add-all`.
-
-If the installs give problems, please navigate into both the client/ and the server/ folders and manually run your install scripts.
+Once that's done, please navigate into both the client/ and the server/ folders and manually run your install scripts.
 
 ---
 
