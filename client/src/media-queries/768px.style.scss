@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  body {
+    // Macro Styles
+    //HomePage
+    .landing {
+      &-image {
+        &__container {
+          max-width: 80vw;
+          flex-direction: column-reverse;
+          padding-top: 0;
+          align-items: center;
+
+          width: 100%;
+
+          &--overlap {
+            display: none;
+            gap: 9rem;
+          }
+        }
+      }
+      &__title {
+        font-size: 3rem;
+        width: 100vw;
+      }
+    }
+  }
+}

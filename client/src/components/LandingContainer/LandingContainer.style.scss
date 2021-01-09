@@ -1,9 +1,11 @@
 .landing {
   &__container {
-    // shift this colour over to body when doing themes
     background: var(--landing-page-background);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
   }
 
   &-title {
@@ -13,8 +15,5 @@
       align-items: center;
       padding-left: 5rem;
     }
-  }
-  &__title {
-    font-size: 6rem;
   }
 }

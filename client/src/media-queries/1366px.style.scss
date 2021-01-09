@@ -1,0 +1,57 @@
+@media (max-width: 1366px) {
+  body {
+    // Macro Styles
+    .header {
+      &__container {
+        height: 60px;
+        background-color: hsla(0, 0%, 0%, 0.6);
+        align-items: center;
+      }
+      &__icon {
+        fill: white;
+      }
+
+      &__link {
+        color: white;
+
+        &:visited {
+          color: white;
+        }
+      }
+    }
+
+    .cart {
+      &__quantity {
+        color: hsl(19, 78%, 67%);
+      }
+    }
+    //HomePage
+    .landing {
+      &__container {
+        padding-top: 8rem;
+      }
+    }
+
+    // ShopPage
+    .card {
+      &__container {
+        max-width: 18rem;
+        max-height: 500px;
+      }
+    }
+
+    // CheckoutPage
+    .checkout {
+      &__container {
+        max-width: 80vw;
+        padding-top: 6rem;
+      }
+
+      &-item {
+        &__container {
+          max-width: 80vw;
+        }
+      }
+    }
+  }
+}

@@ -3,9 +3,10 @@
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     top: 0;
     right: 0;
+    z-index: 1;
   }
 
   &__modal {
@@ -29,18 +30,21 @@
 .modal {
   &-item {
     &__container {
+      padding-left: 2rem;
       &--empty {
         padding-top: 3rem;
+        padding-right: 2rem;
       }
     }
   }
   &__item {
-    padding: 2rem;
+    display: flex;
+    justify-content: center;
   }
 
   &-button {
     &__container {
-      padding-bottom: 2rem;
+      padding: 2rem 0;
     }
   }
 }

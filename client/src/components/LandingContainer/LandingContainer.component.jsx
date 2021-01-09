@@ -8,7 +8,7 @@ import "./LandingContainer.style.scss";
 const LandingContainer = () => {
   return (
     <div className="landing__container">
-      <LandingImageBox image={Kebab} text="Come, we have Tacos!" />
+      <LandingImageBox image={Kebab} text="Come, we have Munchies!" />
       <LandingImageBox
         image={IceCream}
         secondImage={Burger}

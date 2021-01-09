@@ -23,11 +23,7 @@ const LandingImageBox = ({
         </Link>
       )}
       {overlap ? (
-        <div
-          className={`${
-            overlap ? "landing-image__container--overlap" : ""
-          } landing-image__container`}
-        >
+        <div className="landing-image__container--overlap landing-image__container">
           <img
             src={image}
             alt={`Thumbnail of  ${image}`}
@@ -40,11 +36,13 @@ const LandingImageBox = ({
           />
         </div>
       ) : (
-        <img
-          src={image}
-          alt={`Thumbnail of  ${image}`}
-          className="landing__image"
-        />
+        <div className="landing-image__container--single landing-image__container">
+          <img
+            src={image}
+            alt={`Thumbnail of  ${image}`}
+            className="landing__image--single"
+          />
+        </div>
       )}
       {left ? (
         <h1 className="landing__title">

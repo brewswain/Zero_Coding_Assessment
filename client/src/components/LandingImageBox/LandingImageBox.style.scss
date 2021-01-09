@@ -5,24 +5,34 @@
       align-items: center;
       justify-content: center;
       padding-top: 2rem;
+      max-width: 90vw;
+
+      &--single {
+        width: 600px;
+      }
 
       &--overlap {
         display: grid;
         padding-bottom: 5rem;
         width: 600px;
-        gap: 5rem;
+        gap: 11rem;
       }
     }
   }
 
   &__title {
-    font-size: 5rem;
-    width: 40vw;
+    font-size: 4rem;
+    width: 30vw;
     color: var(--landing-title-font-color);
+    font-family: "Yusei Magic", sans-serif;
   }
 
   &__image {
     width: 25%;
+
+    &--single {
+      width: 70%;
+    }
 
     &--primary {
       width: 100%;
@@ -43,6 +53,8 @@
     border: none;
     font-size: 4rem;
     width: 20rem;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 500;
 
     color: var(--landing-link-font-color);
 

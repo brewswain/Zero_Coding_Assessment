@@ -1,0 +1,109 @@
+@media (max-width: 440px) {
+  body {
+    // Macro Styles
+    .header {
+      &__link {
+        font-size: 1.2rem;
+
+        &--primary {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .links {
+      &__container {
+        padding: 0 3rem 0 0;
+        &:first-child {
+          padding: 0;
+        }
+      }
+    }
+
+    .cart {
+      &__container {
+        display: flex;
+        justify-content: center;
+        padding-top: 8rem;
+        align-items: flex-start;
+      }
+      &__modal {
+        background: white;
+        width: 350px;
+        min-height: 400px;
+        position: static;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    //HomePage
+    .landing {
+      &__image {
+        &--single {
+          width: 90%;
+        }
+      }
+
+      &__title {
+        width: 90vw;
+        font-size: 3rem;
+      }
+
+      &__button {
+        width: 90vw;
+        font-size: 3.6rem;
+      }
+    }
+
+    //ShopPage
+    .card-text {
+      &__container {
+        padding: 0 2rem 2rem 2rem;
+      }
+    }
+
+    // CheckoutPage
+    .checkout {
+      &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 95vw;
+        padding-top: 6rem;
+      }
+
+      &-item {
+        &__container {
+          max-width: 95vw;
+        }
+      }
+
+      &__title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .remove-button {
+      &__container {
+        cursor: pointer;
+
+        min-width: 23px;
+        height: 23px;
+
+        &:hover {
+          background: #555;
+          color: white;
+        }
+      }
+    }
+
+    .remove {
+      &__button {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
