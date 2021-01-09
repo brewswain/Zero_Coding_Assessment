@@ -41,14 +41,12 @@ const CheckoutItem = ({ item }) => {
           &#10095;
         </div>
       </div>
-      <div className="checkout__total">
-        ${price * quantity}
-        <div
-          className="remove-button__container"
-          onClick={() => dispatch(clearFromCart({ title }, _id))}
-        >
-          <div className="remove__button">&#10005;</div>
-        </div>
+      <div className="checkout__total">${price * quantity}.00</div>
+      <div
+        className="remove-button__container"
+        onClick={() => dispatch(clearFromCart({ title }, _id))}
+      >
+        <div className="remove__button">&#10005;</div>
       </div>
     </div>
   );
